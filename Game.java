@@ -16,21 +16,23 @@ public class Game {
     //Sets word for game based on word list and random int as described
     static String chosenWord = (String) Array.get(wordList , rand_int);
 
-    private String playersGuess = new String();
-
-
     Scanner checker  = new Scanner(System.in);
+    private final Word gameWord;
 
-
-   //Upon creation of a Game object, gameWord is created, an object of the Word class that is made using the
+    //Upon creation of a Game object, gameWord is created, an object of the Word class that is made using the
     //word chosen from Game's wordList
     Game(){
-        Word gameWord = new Word(chosenWord);
+        gameWord = new Word(chosenWord);
         System.out.println(chosenWord);
         gameWord.printOutWord();
     }
 
-
+    public static String getSicko() {
+        return "sicko";
+    }
+    public Word getGameWord(){
+        return gameWord;
+    }
     public Guess getPlayersGuess() {
         //Method used to gather guess from user via input at terminal
         boolean validated = false;
@@ -53,6 +55,37 @@ public class Game {
         System.out.println("you submitted " + userGuess);
         String upperGuess = userGuess.toUpperCase();
         return new Guess(upperGuess);
+    }
+
+    //checkIfGuessInWord is used to compare the Guess to the Word. It takes in both the Guess and the word, and will
+    //Ideally check them and set statusColors as needed.
+    public void checkIfGuessInWord(Word realWord, Guess newGuess){
+        //this first part checks each letter of the guess against each letter of the real word.
+        //It will need adjustment to work with the false yellow system that will be added.
+        for(GuessLetter gLetter:newGuess.getArrayWord()){
+            for(RealLetter realLetter:realWord.getArrayWord()){
+                if(gLetter.getLetter() == realLetter.getLetter()){
+                    gLetter.setLetterMatch(true);
+                    if (gLetter.getPosition() == realLetter.getPosition()){
+                        gLetter.setPositionMatch(true);
+                    }
+                }
+            }
+
+        }
+
+        //This second part looks at each letter in the guess and sets its status based on the letter and postion bools
+        for(GuessLetter gLetter:newGuess.getArrayWord()){
+            if (gLetter.getLetterMatch()){
+                if(gLetter.getPositionMatch()){
+                    gLetter.setStatusColor(2);
+                }else {
+                gLetter.setStatusColor(1);}
+
+            }else{
+                gLetter.setStatusColor(0);
+            }
+        }
     }
 
 

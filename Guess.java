@@ -19,4 +19,19 @@ public class Guess {
     public void printOutWord(){
         System.out.println(arrayWord);
     }
+    public ArrayList<GuessLetter> getArrayWord(){
+        return arrayWord;
+    }
+
+    //printOutStatusOfGuess builds a string version of the guess that can be used to check progress.
+    public String printOutStatusOfGuess(){
+        String printOut = "";
+        for(GuessLetter guessed:arrayWord){
+            String letter = String.valueOf(guessed.getLetter());
+            String status = String.valueOf(guessed.getStatusColor());
+            printOut = printOut + letter+status;
+        }
+        return printOut;
+    }
 }
+

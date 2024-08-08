@@ -1,0 +1,7 @@
+Logic for checking guess:
+A. Take guess letter, check to see if it is in the word array.
+B. If it is, check to see if it has been guessed
+C. If it has not, set to guessed and check to see if the position matches.
+D. if it does, set statusColor to 2 (green)
+E. if it does not match the position, set statusColor to 1 (yellow)
+f. else set to 0 (grey)

@@ -2,11 +2,19 @@ public class GuessLetter {
         //GuessLetter is a class used to create the letters of the guess. It is to be used to check against the
         //real letters in the actual word
 
+        //statusColor is used to track the color (ie the status) of the letter.
+
 
         private final char firmLetter;
         private final int firmPosition;
+        private int statusColor = 0;
 
 
+
+        //Position and Letter match are used to track the guess status of the letter
+        //They will also be used to determine the correct statusColor
+        private boolean positionMatch = false;
+        private boolean letterMatch = false;
         GuessLetter(char letter, int position){
             firmLetter = letter;
             firmPosition = position;
@@ -22,10 +30,31 @@ public class GuessLetter {
         }
 
     public String toString(){
-        return "letter: " + getLetter() + " position: " + getPosition();
+        return "letter: " + getLetter() + " position: " + getPosition() + " Status: " + getStatusColor()
+                + " positionMatch: " + getPositionMatch() + " letterMatch: " + getLetterMatch();
+    }
+
+    public int getStatusColor(){
+            return statusColor;
+    }
+    public void setStatusColor(int status){
+            statusColor = status;
+    }
+
+    public void setLetterMatch(boolean bool){
+            letterMatch=bool;
+    }
+    public void setPositionMatch(boolean bool){
+            positionMatch=bool;
     }
 
 
+    public boolean getLetterMatch(){
+            return letterMatch;
+    }
+    public boolean getPositionMatch(){
+        return positionMatch;
+    }
     }
 
 
