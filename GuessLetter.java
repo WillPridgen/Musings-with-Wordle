@@ -17,10 +17,15 @@ public class GuessLetter {
     public char getLetter(){
             return firmLetter;
         }
-
-        public int getPosition(){
+    public int getPosition(){
             return firmPosition;
         }
+
+    public String toString(){
+        return "letter: " + getLetter() + " position: " + getPosition();
+    }
+
+
     }
 
 

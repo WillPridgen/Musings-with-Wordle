@@ -14,7 +14,10 @@ public class RealLetter {
     private boolean hasBeenSolved = false;
     private boolean guessedInWord = false;
 
-    private RealLetter(char letter, int position){
+
+    //RealLetter has two constructor instance variables. firmLetter is the letter that is passed when the object is created,
+    //firmPosition is the position of the letter in the word. These should not be changed further on.
+    RealLetter(char letter, int position){
         firmLetter = letter;
         firmPosition = position;
     }
@@ -43,5 +46,9 @@ public class RealLetter {
 
     public int getPosition(){
         return firmPosition;
+    }
+
+    public String toString(){
+        return "<letter: " + getLetter() + " position: " + getPosition() +">";
     }
 }
