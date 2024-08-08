@@ -22,7 +22,7 @@ public class Word {
         return arrayWord;
     }
 
-    public void printArrayList(){
+    public void printOutWord(){
         System.out.println(arrayWord);
     }
 

@@ -7,7 +7,7 @@ public class GuessLetter {
         private final int firmPosition;
 
 
-        private GuessLetter(char letter, int position){
+        GuessLetter(char letter, int position){
             firmLetter = letter;
             firmPosition = position;
         }
