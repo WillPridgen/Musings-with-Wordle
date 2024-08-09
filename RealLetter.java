@@ -13,7 +13,7 @@ public class RealLetter {
     //if both are true, the letter has been guessed fully.
     private boolean hasBeenSolved = false;
     private boolean guessedInWord = false;
-
+    private GuessLetter attachedLetter = null;
 
     //RealLetter has two constructor instance variables. firmLetter is the letter that is passed when the object is created,
     //firmPosition is the position of the letter in the word. These should not be changed further on.
@@ -23,6 +23,15 @@ public class RealLetter {
     }
 
 
+    public GuessLetter getAttachedLetter(){
+        return attachedLetter;
+    }
+    public void setAttachedLetter(GuessLetter newLetter){
+        attachedLetter = newLetter;
+    }
+    public int getAttachedLetterStatus(){
+        return attachedLetter.getStatusColor();
+    }
 
     public boolean getHasBeenSolved(){
         return hasBeenSolved;

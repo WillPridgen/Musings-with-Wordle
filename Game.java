@@ -14,8 +14,8 @@ public class Game {
     static int rand_int = new Random().nextInt(wordList.length);
 
     //Sets word for game based on word list and random int as described
-    static String chosenWord = (String) Array.get(wordList , rand_int);
-
+    //static String chosenWord = (String) Array.get(wordList , rand_int);
+    static String chosenWord = "test";
     Scanner checker  = new Scanner(System.in);
     private final Word gameWord;
 
@@ -69,10 +69,21 @@ public class Game {
                     if (gLetter.getPosition() == realLetter.getPosition()){
                         gLetter.setPositionMatch(true);
                     }
+                    if(realLetter.getAttachedLetter() == null){
+                        realLetter.setAttachedLetter(gLetter);
+
+                    } else {
+                        if(realLetter.getAttachedLetterStatus() < gLetter.getStatusColor()){
+                            realLetter.getAttachedLetter().setLetterMatch(false);
+                            realLetter.setAttachedLetter(gLetter);
+                        }
+
+                        }
+                    }
                 }
             }
 
-        }
+
 
         //This second part looks at each letter in the guess and sets its status based on the letter and postion bools
         for(GuessLetter gLetter:newGuess.getArrayWord()){
