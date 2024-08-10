@@ -47,4 +47,11 @@ public class Word {
         return true;
 
     }
+    public void resetStatus(){
+        for(RealLetter letter: arrayWord){
+            letter.setAttachedLetter(null);
+            letter.setHasBeenSolved(false);
+            letter.setGuessedInWord(false);
+        }
+    }
 }

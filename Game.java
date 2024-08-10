@@ -25,8 +25,8 @@ public class Game {
     //word chosen from Game's wordList
     Game() {
         gameWord = new Word(chosenWord);
-        System.out.println(chosenWord);
-        gameWord.printOutWord();
+        //System.out.println(chosenWord);
+       // gameWord.printOutWord();
     }
 
     public static String getSicko() {
@@ -65,6 +65,7 @@ public class Game {
     //Ideally check them and set statusColors as needed.
 
     public void checkIfGuessInWord(Word realWord, Guess newGuess) {
+        realWord.resetStatus();
         //This method compares the guesses word to the real word.
         ArrayList<RealLetter> tempArrayOfWords = (ArrayList<RealLetter>) realWord.getArrayWord().clone();
         //this clone of the real word arraylist is used later, as elements will be deleted from it

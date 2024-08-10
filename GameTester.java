@@ -3,10 +3,10 @@ public class GameTester {
 
         Game newGame = new Game();
         Word word = newGame.getGameWord();
-        System.out.println(word);
+        //System.out.println(word);
         while(!word.isSolved){
             Guess newGuess = newGame.getPlayersGuess();
-            System.out.println(newGuess.printOutStatusOfGuess());
+            //System.out.println(newGuess.printOutStatusOfGuess());
             newGame.checkIfGuessInWord(word,newGuess);
             System.out.println(newGuess.printOutStatusOfGuess());
             word.setIsSolved(word.checkIfSolved(newGuess.getArrayWord()));
