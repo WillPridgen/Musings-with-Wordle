@@ -9,7 +9,7 @@ public class Word {
     //that is being guessed for.
 
 
-
+    boolean isSolved = false;
     Word(String wordGiven){
         //Word class is used to create the arrayList of RealLetters that will constitute the word.
         wordGiven = wordGiven.toUpperCase();
@@ -31,4 +31,20 @@ public class Word {
         System.out.println(arrayWord);
     }
 
+    public boolean getIsSolved(){
+        return isSolved;
+    }
+    public void setIsSolved(boolean solved){
+        isSolved = solved;
+    }
+
+    public boolean checkIfSolved(ArrayList<GuessLetter> guessList){
+        for(GuessLetter guesses:guessList){
+            if(guesses.getStatusColor()!=2){
+                return false;
+            }
+        }
+        return true;
+
+    }
 }

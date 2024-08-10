@@ -8,6 +8,7 @@ public class GuessLetter {
         private final char firmLetter;
         private final int firmPosition;
         private int statusColor = 0;
+        private int boundToPosition = 0;
 
 
 
@@ -38,7 +39,7 @@ public class GuessLetter {
             return statusColor;
     }
     public void setStatusColor(int status){
-            System.out.println("status changed to " + status);
+            System.out.println("status changed from " +statusColor + " to: " + status);
             statusColor = status;
     }
 
@@ -56,6 +57,13 @@ public class GuessLetter {
     public boolean getPositionMatch(){
         return positionMatch;
     }
+    public void setBoundToPosition(int position){
+            boundToPosition = position;
+    }
+    public int getBoundToPosition(){
+            return boundToPosition;
+    }
+
     }
 
 
