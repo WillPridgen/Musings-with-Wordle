@@ -58,6 +58,6 @@ public class RealLetter {
     }
 
     public String toString(){
-        return "<letter: " + getLetter() + " position: " + getPosition() +">";
+        return "<letter: " + getLetter() + " position: " + getPosition() + " attached letter: " + attachedLetter + '>';
     }
 }

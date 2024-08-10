@@ -30,14 +30,15 @@ public class GuessLetter {
         }
 
     public String toString(){
-        return "letter: " + getLetter() + " position: " + getPosition() + " Status: " + getStatusColor()
-                + " positionMatch: " + getPositionMatch() + " letterMatch: " + getLetterMatch();
+        return "++++" + "letter: " + getLetter() + " position: " + getPosition() + " Status: " + getStatusColor()
+                + " positionMatch: " + getPositionMatch() + " letterMatch: " + getLetterMatch() + "++++";
     }
 
     public int getStatusColor(){
             return statusColor;
     }
     public void setStatusColor(int status){
+            System.out.println("status changed to " + status);
             statusColor = status;
     }
 

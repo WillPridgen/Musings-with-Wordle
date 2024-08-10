@@ -12,6 +12,7 @@ public class Word {
 
     Word(String wordGiven){
         //Word class is used to create the arrayList of RealLetters that will constitute the word.
+        wordGiven = wordGiven.toUpperCase();
         char[] charArrayOfWord = wordGiven.toCharArray();
         int index = 0;
         for (char charOut:charArrayOfWord) {

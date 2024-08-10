@@ -6,7 +6,8 @@ public class GameTester {
         System.out.println(word);
         Guess newGuess = newGame.getPlayersGuess();
         System.out.println(newGuess.printOutStatusOfGuess());
-        newGame.checkIfGuessInWord(word,newGuess);
+        //newGame.checkIfGuessInWord(word,newGuess);
+        newGame.newCheckGuess(word,newGuess);
         System.out.println(newGuess.printOutStatusOfGuess());
     }
 }
