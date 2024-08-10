@@ -1,3 +1,4 @@
+package src;
 public class GuessLetter {
         //GuessLetter is a class used to create the letters of the guess. It is to be used to check against the
         //real letters in the actual word

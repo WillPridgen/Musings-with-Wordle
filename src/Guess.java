@@ -1,6 +1,6 @@
 //Guess class is used to create a arrayList of GuessLetters, that is made from the user inputted guess.
 //it is similar to the Word class.
-
+package src;
 import java.util.ArrayList;
 
 public class Guess {
