@@ -49,7 +49,7 @@ public class Game {
                 if ((userGuess.length() == 4)) {
                     validated = true;
                 } else {
-                    System.out.println("Guess can only be 4 letters long");
+                    System.out.println("Guess must be 4 letters long");
                 }
             } else {
                 System.out.println("Guess can only be letters");

@@ -39,7 +39,7 @@ public class GuessLetter {
             return statusColor;
     }
     public void setStatusColor(int status){
-            System.out.println("status changed from " +statusColor + " to: " + status);
+            //System.out.println("status changed from " +statusColor + " to: " + status);
             statusColor = status;
     }
 
