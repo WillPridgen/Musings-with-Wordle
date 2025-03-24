@@ -2,6 +2,8 @@ package src;
 public class GameTester {
     public static void main(String[] args){
 
+
+
         Game newGame = new Game();
         Word word = newGame.getGameWord();
         //System.out.println(word);
