@@ -1,4 +1,6 @@
-package src;
+package src.SwingGame;
+
+import src.SwingTest;
 
 import javax.swing.*;
 
