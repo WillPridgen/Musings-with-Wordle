@@ -1,4 +1,4 @@
-package src;
+package src.SwingGame;
 import javax.swing.*;
 import javax.swing.JFrame;
 import javax.swing.text.JTextComponent;
@@ -33,8 +33,9 @@ public class SwingTest extends JFrame {
     private void guessClick() {
 
         System.out.println("Guess Clicked");
-        counter+=1;
-        gameArea.append("Guess clicked"+ counter);;
+        gameArea.setText("");
+        gameArea.append(GuessArea.getText());
+
     }
 
 }

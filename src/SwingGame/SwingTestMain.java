@@ -1,8 +1,7 @@
 package src.SwingGame;
 
-import src.SwingTest;
-
 import javax.swing.*;
+import java.net.URL;
 
 public class SwingTestMain {
     public static void main(String[] args) {
@@ -11,6 +10,12 @@ public class SwingTestMain {
 
                 SwingTest swingTester = new SwingTest();
 
+                //Swing window setup
+                URL iconURL = getClass().getResource("health.jpg");
+                ImageIcon icon = new ImageIcon(iconURL);
+                swingTester.setTitle("Word Game");
+                swingTester.setSize(500,300);
+                swingTester.setIconImage(icon.getImage());
                 swingTester.setVisible(true);
 
             }
