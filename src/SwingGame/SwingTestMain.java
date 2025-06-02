@@ -18,6 +18,7 @@ public class SwingTestMain {
                 swingTester.setIconImage(icon.getImage());
                 swingTester.setVisible(true);
 
+
             }
 
         });
